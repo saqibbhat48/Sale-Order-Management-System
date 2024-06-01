@@ -20,7 +20,7 @@ const CompletedOrders = () => {
   if (error) return <div>Error loading completed orders</div>;
 
   return (
-    <div className="p-4 bg-white dark:bg-gray-800 text-black dark:text-white min-h-screen">
+    <div className="p-4 bg-white dark:bg-gray-800 text-black dark:text-white min-h-[80dvh]">
       <h1 className="text-2xl font-bold mb-4">Completed Orders</h1>
       <table className="min-w-full bg-white dark:bg-gray-900">
         <thead>

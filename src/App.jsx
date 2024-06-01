@@ -5,6 +5,7 @@ import CompletedOrders from './components/CompletedOrders';
 import Login from './components/Login';
 import { ThemeProvider } from './components/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
+import Footer from './components/Footer'
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,13 +33,13 @@ const App = () => {
   return (
     <ThemeProvider>
       <Router>
-        <div>
-          <nav className="p-4 bg-gray-800 text-white flex gap-2 items-center">
+        <div className='min-h-[90.3dvh]'>
+          <nav className="p-4 bg-gray-900 text-white flex gap-2 items-center">
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-white bg-gray-900 px-3 py-2 rounded"
+                ? "text-white bg-gray-950 px-3 py-2 rounded"
                 : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded"
             }
           >
@@ -48,7 +49,7 @@ const App = () => {
             to="/completed"
             className={({ isActive }) =>
               isActive
-                ? "text-white bg-gray-900 px-3 py-2 rounded"
+                ? "text-white bg-gray-950 dark:950 px-3 py-2 rounded"
                 : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded"
             }
           >
@@ -66,7 +67,9 @@ const App = () => {
             <Route path="/" element={isAuthenticated ? <ActiveOrders /> : <Navigate to="/login" />} />
             <Route path="/completed" element={isAuthenticated ? <CompletedOrders /> : <Navigate to="/login" />} />
           </Routes>
+          
         </div>
+        <Footer/>
       </Router>
     </ThemeProvider>
   );

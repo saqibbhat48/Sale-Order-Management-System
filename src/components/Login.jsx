@@ -19,7 +19,7 @@ const Login = ({ setIsAuthenticated }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-200 dark:bg-gray-800 text-black dark:text-white">
+    <div className="min-h-[80dvh] flex items-center justify-center bg-slate-200 dark:bg-gray-800 text-black dark:text-white">
       <div className="bg-white dark:bg-gray-900 p-8 rounded shadow-sm shadow-black dark:shadow-white w-80">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
         {errors.username && <div className="text-red-500 mb-4">{errors.username.message}</div>}
