@@ -13,7 +13,7 @@ let activeOrders = [
     },
     {
       id: 2,
-      customer_id: '3',
+      customer_id: '2',
       sku_id: '4',
       price: '200',
       quantity: '20',
